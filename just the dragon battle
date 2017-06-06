@@ -1,0 +1,27 @@
+sprite = codesters.Sprite("knight1", -175, -150)
+sprite.set_speed(2)
+
+def park_scene():
+    stage.set_background("park")
+    sprite.say("I should hurry to the castle!")
+    sprite.move_forward(550) 
+park_scene()
+
+def bridge_scene():
+    stage.set_background("drawbridge")
+    sprite.go_to(-175, -150) 
+    sprite.say("I made it") 
+    stage.wait(2)
+bridge_scene()
+
+def battle_scene():
+    dragon = codesters.Sprite("dragon") 
+    sprite.say("Oh no, a dragon!") 
+    sprite.glide_to(-100, 50)
+    sprite.move_left(50)
+    sprite.move_right(50)
+    dragon.move_right(45)
+    dragon.move_left(34)
+    dragon.glide_to(-1000, 1000)
+    sprite.say("The path is clear!") 
+battle_scene()
